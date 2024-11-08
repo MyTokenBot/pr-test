@@ -1,0 +1,6 @@
+# app/views/users/index.html.erb
+<h1>Users</h1>
+<% @users.each do |user| %>
+  <div>Name: <%= user.name %></div>
+  <div>Email: <%= params[:email] %></div>
+<% end %>
