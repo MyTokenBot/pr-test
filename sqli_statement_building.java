@@ -6,7 +6,6 @@ import java.sql.SQLException;
 
 public class SQLInjectionExample {
     public static void main(String[] args) {
-        // Vulnerable code
         String userId = args[0];
         String sql = "SELECT * FROM users WHERE id = '" + userId + "'";
         try (Connection conn = DriverManager.getConnection("jdbc:h2:mem:testdb");
