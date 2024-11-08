@@ -13,7 +13,6 @@ public class UsersController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> GetUser(int id)
     {
-        // Vulnerable code
         var user = await _context.Users.FindAsync(id);
         if (user == null)
         {
