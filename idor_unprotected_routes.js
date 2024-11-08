@@ -8,7 +8,6 @@ const users = [
 ];
 
 app.get('/users/:id', (req, res) => {
-    // Vulnerable code
     const user = users.find(u => u.id === parseInt(req.params.id));
     res.json(user);
 });
