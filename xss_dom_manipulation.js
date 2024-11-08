@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 
 app.get('/echo', (req, res) => {
-    // Vulnerable code
     const userInput = req.query.input;
     res.send(`<div>You said: ${userInput}</div>`);
 });
