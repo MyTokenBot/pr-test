@@ -18,7 +18,6 @@ public class UsersController : ControllerBase
         {
             return NotFound();
         }
-
         return user;
     }
 }
